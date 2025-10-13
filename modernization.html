@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: The Evolution of Medical Anthropology & Sociology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 500px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+    <main>
+        <section class="min-h-screen flex flex-col justify-center items-center text-center p-8 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4" style="color: #003F5C;">A Critical Update</h1>
+                <h2 class="text-xl md:text-2xl font-medium text-gray-600">The Modernization of Medical Anthropology & Sociology</h2>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-500">
+                    From simple observation to critical engagement, discover the story of how two academic fields evolved to tackle the world's most complex health challenges.
+                </p>
+                <div class="mt-8 text-sm font-bold animate-bounce">&#8595; Scroll to explore &#8595;</div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight" style="color: #003F5C;">Two Eras of Thought</h2>
+                    <p class="mt-2 text-lg text-gray-600">The fields underwent a dramatic shift, moving from a linear view of progress to a critical analysis of power and inequality.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4" style="border-color: #FFA600;">
+                        <h3 class="text-2xl font-bold mb-4">The Foundational View <span class="text-base font-medium text-gray-500">(pre-1990s)</span></h3>
+                        <p class="mb-4 text-gray-600">Early work focused on how Western biomedicine spread to other societies, viewing it as a "carrier of modernity."</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-xl mr-2" style="color: #FFA600;">&rarr;</span><span><strong>Primary Question:</strong> How do "traditional" societies adopt "modern" medicine?</span></li>
+                            <li class="flex items-start"><span class="text-xl mr-2" style="color: #FFA600;">&rarr;</span><span><strong>Limitation:</strong> Often overlooked power dynamics and assumed a one-size-fits-all path to progress.</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-t-4" style="border-color: #58508D;">
+                        <h3 class="text-2xl font-bold mb-4">The Modern Turn <span class="text-base font-medium text-gray-500">(post-1990s)</span></h3>
+                        <p class="mb-4 text-gray-600">A critical shift rejected this linear model, instead centering on power, politics, and historical context.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start"><span class="text-xl mr-2" style="color: #58508D;">&rarr;</span><span><strong>Key Concept:</strong> Focus on "Structural Violence" & "Neoliberalism" to see how systems cause illness.</span></li>
+                            <li class="flex items-start"><span class="text-xl mr-2" style="color: #58508D;">&rarr;</span><span><strong>Goal:</strong> To critique, analyze, and participate in solving complex global health issues.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+                 <h2 class="text-3xl font-bold tracking-tight" style="color: #003F5C;">Visualizing the Shift in Focus</h2>
+                 <p class="mt-2 mb-8 max-w-3xl mx-auto text-lg text-gray-600">This radar chart illustrates the dramatic change in research priorities, moving from diffusion and tradition towards a deep analysis of structural issues, technology, and social justice.</p>
+                <div class="bg-gray-50 p-4 sm:p-8 rounded-2xl shadow-inner">
+                    <div class="chart-container">
+                        <canvas id="focusShiftChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight" style="color: #003F5C;">New Frontiers: Exploring Modern Topics</h2>
+                    <p class="mt-2 text-lg text-gray-600">Today's research follows health into the lab, the market, and the political arena across the globe.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <span class="text-4xl">🏛️</span>
+                        <h3 class="text-xl font-bold mt-4 mb-2">Biopolitics</h3>
+                        <p class="text-gray-600">Analyzing how governments manage life and populations through health crises, from pandemics to vaccination campaigns.</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <span class="text-4xl">🧬</span>
+                        <h3 class="text-xl font-bold mt-4 mb-2">Genetics & Biotech</h3>
+                        <p class="text-gray-600">Examining the moral and social implications of genetic screening, editing, and new identities based on biological risk.</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <span class="text-4xl">🤖</span>
+                        <h3 class="text-xl font-bold mt-4 mb-2">Medical AI & Data</h3>
+                        <p class="text-gray-600">Critically investigating algorithmic bias in diagnostic tools and the changing patient-provider relationship in the digital age.</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <span class="text-4xl">🌍</span>
+                        <h3 class="text-xl font-bold mt-4 mb-2">Transnational Flows</h3>
+                        <p class="text-gray-600">Tracking pathogens, capital, and medical ideas across borders to understand global health disparities and the ethics of outsourced clinical trials.</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <span class="text-4xl">🌿</span>
+                        <h3 class="text-xl font-bold mt-4 mb-2">Medical Pluralism</h3>
+                        <p class="text-gray-600">Recognizing that biomedicine is one system among many, and studying how people navigate traditional healers, pharmaceuticals, and other therapies.</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <span class="text-4xl">⚖️</span>
+                        <h3 class="text-xl font-bold mt-4 mb-2">Social Justice</h3>
+                        <p class="text-gray-600">A core commitment to exposing and addressing health inequalities caused by social, political, and economic structures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold tracking-tight" style="color: #003F5C;">Conclusion: A Field in Motion</h2>
+                <p class="mt-4 text-xl text-gray-600">The modernization of medical anthropology and sociology is defined by a commitment to **critical adaptability** and **social justice**.</p>
+                <div class="mt-8 border-t-2 pt-8">
+                     <h3 class="text-xl font-bold mb-4">Core Characteristics of Modern Research:</h3>
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-left">
+                        <div class="bg-gray-100 p-6 rounded-lg w-full md:w-auto">
+                            <h4 class="font-bold text-lg" style="color: #BC5090;">🔬 Multisited Ethnography</h4>
+                            <p>Tracking health issues across global networks—from labs to villages to policy meetings.</p>
+                        </div>
+                        <div class="font-bold text-2xl text-gray-300">&rarr;</div>
+                        <div class="bg-gray-100 p-6 rounded-lg w-full md:w-auto">
+                            <h4 class="font-bold text-lg" style="color: #FF6361;">🤝 Applied Relevance</h4>
+                            <p>Contributing directly to policy, intervention design, and ethical debates in a globalized world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="text-center py-8 bg-gray-800 text-gray-300">
+        <p>Infographic based on "Modernization of Medical Anthropology and Sociology: A Critical Update".</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const processLabel = (label) => {
+                const maxLength = 16;
+                if (label.length <= maxLength) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            };
+            
+            const chartLabels = [
+                'Diffusion Focus', 
+                'Ethnomedicine', 
+                'Structural Critique', 
+                'Biopolitics & Tech', 
+                'Globalization', 
+                'Social Justice'
+            ].map(processLabel);
+
+            const ctx = document.getElementById('focusShiftChart').getContext('2d');
+            const focusShiftChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: chartLabels,
+                    datasets: [{
+                        label: 'Foundational View (Pre-1990s)',
+                        data: [8, 7, 2, 1, 3, 2],
+                        backgroundColor: 'rgba(255, 166, 0, 0.2)',
+                        borderColor: 'rgba(255, 166, 0, 1)',
+                        pointBackgroundColor: 'rgba(255, 166, 0, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(255, 166, 0, 1)'
+                    }, {
+                        label: 'Modern View (Post-1990s)',
+                        data: [2, 4, 9, 8, 9, 8],
+                        backgroundColor: 'rgba(88, 80, 141, 0.2)',
+                        borderColor: 'rgba(88, 80, 141, 1)',
+                        pointBackgroundColor: 'rgba(88, 80, 141, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(88, 80, 141, 1)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0, 63, 92, 0.1)' },
+                            grid: { color: 'rgba(0, 63, 92, 0.1)' },
+                            pointLabels: { 
+                                font: { size: 12, weight: 'bold' },
+                                color: '#003F5C'
+                            },
+                            ticks: {
+                                backdropColor: 'rgba(248, 249, 250, 0.75)',
+                                color: '#6B7280',
+                                stepSize: 2
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 10
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(tooltipItems) {
+                                    const item = tooltipItems[0];
+                                    let label = item.chart.data.labels[item.dataIndex];
+                                    if (Array.isArray(label)) {
+                                      return label.join(' ');
+                                    } else {
+                                      return label;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
